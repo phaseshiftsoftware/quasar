@@ -1,0 +1,20 @@
+{
+  "name": "quasar",
+  "version": "0.1.0",
+  "description": "The next generation re-write of the Phase Shift Software homepage.",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/qheaden/quasar.git"
+  },
+  "author": "Quentin A. Headen",
+  "license": "UNLICENSED",
+  "homepage": "https://bitbucket.org/qheaden/quasar#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "gulp": "^3.9.1"
+  }
+}
