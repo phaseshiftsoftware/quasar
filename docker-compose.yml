@@ -6,8 +6,8 @@ services:
         volumes:
             - .:/app
         working_dir: /app
-        entrypoint: /usr/local/bin/node
-        command: [server.js]
+        entrypoint: ./node_modules/.bin/nodemon
+        command: [-w, "src", src/server.js]
         ports:
             - "8080:8080"
     npm:
@@ -16,3 +16,9 @@ services:
             - .:/app
         working_dir: /app
         entrypoint: /usr/local/bin/npm
+    gulp:
+        image: node:latest
+        volumes:
+            - .:/app
+        working_dir: /app
+        entrypoint: ./node_modules/.bin/gulp
