@@ -1,3 +1,6 @@
-h1 {
-  font-family: Arial;
+.home-button {
+  max-width: 50%;
+  max-height: 20%;
+  background-color: #2980b9;
+  color: #ffffff;
 }
