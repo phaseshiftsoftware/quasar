@@ -22,3 +22,9 @@ services:
             - .:/app
         working_dir: /app
         entrypoint: ./node_modules/.bin/gulp
+    bower:
+        image: node:latest
+        volumes:
+            - .:/app
+        working_dir: /app
+        entrypoint: [./node_modules/.bin/bower, --allow-root]

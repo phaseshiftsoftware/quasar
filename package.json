@@ -20,6 +20,7 @@
     "handlebars": "^4.0.5"
   },
   "devDependencies": {
+    "bower": "^1.7.9",
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "nodemon": "^1.11.0"
