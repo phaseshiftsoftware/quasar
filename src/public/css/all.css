@@ -6,8 +6,15 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+.page-content {
+  font-size: 1.5em;
+  padding-top: 200px;
+  color: #ffffff;
+}
+.page-content strong {
+  color: #7480ff;
+}
 .home-button-row {
-  margin-top: 200px;
   height: 250px;
   font-size: 2.5em;
   color: #ffffff;
