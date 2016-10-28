@@ -22,6 +22,25 @@ class TemplateHelper
         }
 
     }
+
+    /**
+     * Load, compile, and register a partial for use in other templates.
+     *
+     * @param {string} partialName The name the partial will be registered with.
+     * @param {string} filePath The path to the template file.
+     * @return {bool} True if the registration was sucessful and false otherwise.
+     */
+    static loadPartialFromFile(partialName, filePath)
+    {
+        try {
+            var data = fs.readFileSync(filePath, { encoding: "utf8" });
+            handlebars.registerPartial(partialName, data);
+        } catch (exception) {
+            return false;
+        }
+
+        return true;
+    }
 }
 
 module.exports = TemplateHelper;
