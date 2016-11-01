@@ -11,7 +11,7 @@
     "url": "git+ssh://git@bitbucket.org/qheaden/quasar.git"
   },
   "author": "Quentin A. Headen",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "homepage": "https://bitbucket.org/qheaden/quasar#readme",
   "dependencies": {
     "express": "^4.14.0",
