@@ -1,18 +1,18 @@
-var gulp = require('gulp');
-var eslint = require('gulp-eslint');
-var less = require('gulp-less');
-var concat = require('gulp-concat');
+"use strict";
 
-gulp.task('default', function() {
-    console.log('To be implemented.');
-});
+let gulp = require("gulp");
+let eslint = require("gulp-eslint");
+let less = require("gulp-less");
+let concat = require("gulp-concat");
 
-gulp.task('lint', function() {
+gulp.task("default", ["lint", "css"]);
+
+gulp.task("lint", function() {
     return gulp.src(
-        ['**/*.js','!node_modules/**']
+        ["**/*.js","!node_modules/**"]
     ).pipe(
         eslint({
-            configFile: "eslint.json"
+            "configFile": "eslint.json"
         })
     ).pipe(
         eslint.format()
@@ -21,15 +21,15 @@ gulp.task('lint', function() {
     );
 });
 
-gulp.task('css', function() {
+gulp.task("css", function() {
     return gulp.src(
-        ['src/css/**/*.less']
+        ["src/css/**/*.less"]
     ).pipe(
         less()
     ).pipe(
-        concat('all.css')
+        concat("all.css")
     ).pipe(
-        gulp.dest('src/public/css')
+        gulp.dest("src/public/css")
     )
 });
         

@@ -5,7 +5,19 @@
         "browser": true,
         "es6": true
     },
-    "rules": {
-        "no-console": "off"
+	"rules": {
+        "no-console": "off",
+		"strict": ["error"],
+		"no-var": ["error"],
+		"quote-props": ["error", "always"],
+		"quotes": ["error", "double"],
+		"comma-dangle": ["error", "never"],
+		"max-len": ["error", {
+			"code": 80,
+			"comments": 80,
+			"ignoreRegExpLiterals": true
+		}],
+		"indent": ["error", 4],
+		"no-tabs": ["error"]
     }
 }
