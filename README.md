@@ -8,13 +8,13 @@ A docker-compose has been provided in the source to easily run the website via t
 
 First, install all the necessary dependnecies.
 ```
-docker-compose run --rm npm install
-docker-compose run --rm bower install
+docker run --rm -v $(pwd):/app --workdir /app node npm install
+docker run --rm -v $(pwd):/app --workdir /app ./node_modules/.bin/bower install
 ```
 
-Build the CSS.
+Generate necessary website resources.
 ```
-docker-compose run --rm gulp css
+docker run --rm -v $(pwd):/app --workdir /app node ./node_modules/.bin/gulp
 ```
 
 Now run the website.
