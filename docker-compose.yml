@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-    website:
+    quasar:
         image: node:latest
         volumes:
             - .:/app
@@ -10,3 +10,9 @@ services:
         command: [-w, "src", src/server.js]
         ports:
             - "8080:8080"
+        networks:
+            - webproxy
+
+networks:
+    webproxy:
+        external: true
