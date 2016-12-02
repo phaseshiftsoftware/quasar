@@ -32,4 +32,4 @@ new IndexController(app, __dirname + "/templates");
 new AboutController(app, __dirname + "/templates");
 new DevelopmentController(app, __dirname + "/templates");
 
-app.listen(8080, () => console.log("Listening on port 8080."));
+app.listen(80, () => console.log("Listening on port 80."));
