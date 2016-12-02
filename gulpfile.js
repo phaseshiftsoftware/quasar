@@ -4,8 +4,13 @@ let gulp = require("gulp");
 let eslint = require("gulp-eslint");
 let less = require("gulp-less");
 let concat = require("gulp-concat");
+let bower = require("gulp-bower");
 
-gulp.task("default", ["lint", "css"]);
+gulp.task("default", ["bower", "lint", "css"]);
+
+gulp.task("bower", function() {
+    return bower();
+});
 
 gulp.task("lint", function() {
     return gulp.src(
