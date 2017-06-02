@@ -20,12 +20,12 @@
     "gulp-bower": "0.0.13",
     "gulp-concat": "^2.6.0",
     "gulp-less": "^3.1.0",
-    "handlebars": "^4.0.5"
-  },
-  "devDependencies": {
+    "handlebars": "^4.0.5",
     "bower": "^1.7.9",
     "gulp": "^3.9.1",
-    "gulp-eslint": "^3.0.1",
+    "gulp-eslint": "^3.0.1"
+  },
+  "devDependencies": {
     "nodemon": "^1.11.0"
   }
 }
