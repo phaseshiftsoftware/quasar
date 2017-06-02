@@ -32,4 +32,6 @@ new IndexController(app, __dirname + "/templates");
 new AboutController(app, __dirname + "/templates");
 new DevelopmentController(app, __dirname + "/templates");
 
-app.listen(80, () => console.log("Listening on port 80."));
+let port = process.env.PORT ? process.env.PORT : 80;
+
+app.listen(port, () => console.log(`Listening on port ${port}`));
