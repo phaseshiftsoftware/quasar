@@ -2,25 +2,25 @@ version: '2'
 
 services:
     quasar:
-        image: node:6
+        image: node:8
         volumes:
             - .:/app
         working_dir: /app
         command: "./node_modules/.bin/nodemon src/server.js"
     npm:
-        image: node:6
+        image: node:8
         volumes:
             - .:/app
         working_dir: /app
         entrypoint: npm
     gulp:
-        image: node:6
+        image: node:8
         volumes:
             - .:/app
         working_dir: /app
         entrypoint: ./node_modules/.bin/gulp
     bower:
-        image: node:6
+        image: node:8
         volumes:
             - .:/app
         working_dir: /app
