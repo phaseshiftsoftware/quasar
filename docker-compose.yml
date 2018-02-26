@@ -1,5 +1,4 @@
 version: '2'
-
 services:
     quasar:
         image: node:8
@@ -13,19 +12,6 @@ services:
             - .:/app
         working_dir: /app
         entrypoint: npm
-    gulp:
-        image: node:8
-        volumes:
-            - .:/app
-        working_dir: /app
-        entrypoint: ./node_modules/.bin/gulp
-    bower:
-        image: node:8
-        volumes:
-            - .:/app
-        working_dir: /app
-        entrypoint: "./node_modules/.bin/bower --allow-root"
-
 networks:
     default:
         external:
