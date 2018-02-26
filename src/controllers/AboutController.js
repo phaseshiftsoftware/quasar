@@ -7,12 +7,12 @@ let TemplateHelper = require(__dirname + "/../util/TemplateHelper.js");
  */
 class AboutController
 {
-   /**
-    * Constructor.
-    *
-    * @param {Object} app - The ExpressJS application.
-    * @param {string} templateDir - The directory path of the HTML templates.
-    */
+    /**
+     * Constructor.
+     *
+     * @param {Object} app - The ExpressJS application.
+     * @param {string} templateDir - The directory path of the HTML templates.
+     */
     constructor(app, templateDir)
     {
         this.app = app;
@@ -35,6 +35,6 @@ class AboutController
     {
         res.send(this.template({}));
     }
- }
+}
 
 module.exports = AboutController;
