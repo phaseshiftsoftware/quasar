@@ -2,28 +2,31 @@
 
 Quasar is the codename for the next generation of the PhaseShiftSoftware.com homepage. This is a complete re-write in Node.js, and a complete restyling using Bootstrap and the LESS CSS tool.
 
-## Running the Website
+## Building the Site
 
-A docker-compose configuration has been provided to easily run the website via Docker without having to install all the separate depdendencies on the machine.
-
-First, build the website using the following commands.
+To build the site's JavaScript and CSS resources, first ensure that NPM (Node Package Manager) is installed on your system. One you have verfied that, run the following commands:
 
 ```
-docker-compose run --rm npm install
-docker-compose run --rm bower install
-docker-compose run --rm gulp
+npm install
+npm run build
 ```
 
-Then to run the webserver, run the following command.
+This will lint the code, build the JavaScript bundle, and build the CSS bundle.
+
+## Running the Site Locally
+
+After building the code, to run it locally, use the following command:
 
 ```
-docker-compose up -d website
+npm start
 ```
 
-If you wish to run the website in the foreground to view logs, just remove the -d flag.
+That will start the server listening on port 80. To use a different port, set the `PORT` environment variable to the port number you wish to use.
 
-At this point, you should be able to access the website by visiting http://localhost. If you don't see the website appear, try checking the Node server logs by typing `docker-compose logs website`. Perhaps an error occurred.
+## Building a Docker Image
 
-## Changing the Wev Server Port
+If you wish to run the site in a Docker container, you can build a Docker image using the included Dockerfile. Just run the `docker build` command in the root directory to build the image.
+
+## Changing the Web Server Port
 
 A docker-compose .env file has been provided to allow you to configure which port the webserver runs on. By default, it is exposed on port 80. You can modify this port by changing the WEBSERVER_PORT variable value in the .env file located at the root of the repository.
