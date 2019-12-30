@@ -12,10 +12,12 @@ class DevelopmentController
      *
      * @param {Object} app - The ExpressJS application.
      * @param {string} templateDir - The directory path of the HTML templates.
+     * @param {Object} config - The website configuration object.
      */
-    constructor(app, templateDir)
+    constructor(app, templateDir, config)
     {
         this.app = app;
+        this.config = config;
 
         // Build the routes.
         this.app.get("/development", this.handleGetRequest.bind(this));
@@ -33,7 +35,7 @@ class DevelopmentController
      */
     handleGetRequest(req, res)
     {
-        res.send(this.template({}));
+        res.send(this.template({ config: this.config }));
     }
 }
 

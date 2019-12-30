@@ -1,6 +1,10 @@
 "use strict";
 
-let express = require("express");
+const express = require("express");
+const config = require("./config");
+const ConfigValidator = require("./ConfigValidator");
+
+ConfigValidator.validateConfig(config);
 
 // Get helper classes.
 let TemplateHelper = require(__dirname + "/util/TemplateHelper.js");
@@ -28,9 +32,9 @@ TemplateHelper.loadPartialFromFile(
 );
 
 // Register the controllers.
-new IndexController(app, __dirname + "/templates");
-new AboutController(app, __dirname + "/templates");
-new DevelopmentController(app, __dirname + "/templates");
+new IndexController(app, __dirname + "/templates", config);
+new AboutController(app, __dirname + "/templates", config);
+new DevelopmentController(app, __dirname + "/templates", config);
 
 let port = process.env.PORT ? process.env.PORT : 80;
 
