@@ -35,7 +35,7 @@ class AboutController
      */
     handleGetRequest(req, res)
     {
-        res.send(this.template({ config: this.config }));
+        res.send(this.template({ "config": this.config }));
     }
 }
 
